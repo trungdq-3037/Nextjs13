@@ -24,7 +24,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <h1>Root layout</h1>
+        <nav>
+          <h1> Logo</h1>
+          <ul>
+            <li>
+              <a href="/about">About</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Sign Up</a>
+            </li>
+          </ul>
+        </nav>
         {children}
       </body>
     </html>
