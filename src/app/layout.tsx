@@ -1,6 +1,12 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { MonteCarlo } from 'next/font/google'
+
+const montecarlo = MonteCarlo({
+  weight: '400',
+  subsets: ["latin"]
+})
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,20 +28,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <nav>
-          <h1> Logo</h1>
-          <ul>
-            <li>
-              <a href="/about">About</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="#">Sign Up</a>
-            </li>
-          </ul>
+    <html lang="en"  >
+      <body className={montecarlo.className}>
+        <nav className='nav-bar'>
+          <div className='left-side' >
+            <h1> Logo</h1>
+          </div>
+          <div className='right-side'>
+            <ul>
+              <li>
+                <a href="/about">About</a>
+              </li>
+              <li>
+                <a href="#">Sign Up</a>
+              </li>
+            </ul>
+          </div>
         </nav>
         {children}
       </body>
